@@ -1,0 +1,52 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+a.viewBook {
+    text-decoration: none;
+    font-size: 25px;
+    color: blue;
+    text-align: center;
+    display: inherit;
+}
+
+.homeMain {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+}
+
+a.actionAdd {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #28a745;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+a.add {
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.actionDelete {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.actionDelete a {
+    margin-left: 20px;
+}

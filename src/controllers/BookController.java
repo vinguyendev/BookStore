@@ -24,27 +24,33 @@ public class BookController extends HttpServlet {
         ArrayList<Book> list = IOFile.read(path);
         String uri = request.getRequestURI();
         if(uri.contains("addBook")||uri.contains("editBook")) {
-            String msg = "";
             int id = Integer.parseInt(request.getParameter("id"));
             String code = request.getParameter("code");
             String name = request.getParameter("name");
             String author = request.getParameter("author");
             String charge = request.getParameter("price");
             Double price;
-            if(charge.length()==0) {
-                price = Double.parseDouble("0");
-            }
-            else {
+            String msg1 = "", msg2 = "",msg3 = "", msg4 = "";
+            if(charge.matches("-?\\d+(\\.\\d+)?")) {
                 price = Double.parseDouble(charge);
+            }
+            else  {
+                price = Double.parseDouble("0");
             }
 
             Book bo = new Book(id,code,name,author,price);
 
-            System.out.println(bo);
+            if(code.length()==0 || name.length()==0 || author.length()==0 || charge.length()==0 || price==0) {
+                if(code.length()==0) msg1 = "Please enter code in the box";
+                if(name.length()==0) msg2 = "Please enter name in the box";
+                if(author.length()==0) msg3 = "Please enter author in the box";
+                if(charge.length()==0 || price==0) msg4 = "Price must be a number";
 
-            if(code.length()==0 || name.length()==0 || author.length()==0) {
-                msg = "Please enter form input !";
-                request.setAttribute("msg",msg);
+                request.setAttribute("msg1",msg1);
+                request.setAttribute("msg2",msg2);
+                request.setAttribute("msg3",msg3);
+                request.setAttribute("msg4",msg4);
+                System.out.println(msg1+msg2+msg3+msg4+ "123455");
                 request.setAttribute("bo",bo);
                 String url;
                 if(uri.contains("addBook")) url = "/views/addBook.jsp";

@@ -11,62 +11,47 @@
 <head>
     <meta charset="utf-8">
     <title>Java Server Page</title>
-    <style>
-        tr,td {
-            padding: 10px;
-        }
-        a {
-            display: inline-block;
-            padding: 3px 10px;
-            font-size: 13px;
-            line-height: 20px;
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            background-color: #28a745;
-            margin-left: 5px;
-            border-radius: 5px;
-        }
-        tr td:nth-child(2n+1) {
-            width: 100px
-        }
-        tr td:nth-child(2n) {
-            width: 150px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
 <%@page import="models.Book" %>
 <% Book bo = (Book) request.getAttribute("bo"); %>
-<h1>Are you sure you want to delete this book?</h1>
+    <div class="container">
+        <h1 class="homeMain">Are you sure you want to delete this book?</h1>
 
-<table border="1">
-    <tr>
-        <td>Code: </td>
-        <td><%=bo.getCode()%></td>
-    </tr>
-    <tr>
-        <td>Name:</td>
-        <td><%=bo.getName()%></td>
-    </tr>
-    <tr>
-        <td>Autdor:</td>
-        <td><%=bo.getAuthor()%>></td>
-    </tr>
-    <tr>
-        <td>Price:</td>
-        <td><%=bo.getPrice()%> USD</td>
-    </tr>
-</table>
-<br>
-<form action="deleteBook" method="post">
-    <input type="hidden" name="id" value="<%=bo.getId()%>"/>
-    <input type="submit" value="Yes"/>
-</form>
-<a href="Home">
-    <input type="submit" value="No">
-</a>
+        <table class="table table-bordered" style="width: 50%;margin: auto">
+            <tbody>
+                <tr>
+                    <th scope="row">Code: </th>
+                    <td><%=bo.getCode()%></td>
+                </tr>
+                <tr>
+                    <th scope="row">Name:</th>
+                    <td><%=bo.getName()%></td>
+                </tr>
+                <tr>
+                    <th scope="row">Author:</th>
+                    <td><%=bo.getAuthor()%></td>
+                </tr>
+                <tr>
+                    <th scope="row">Price:</th>
+                    <td><%=bo.getPrice()%> USD</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <div class="actionDelete">
+            <form action="deleteBook" method="post">
+                <input type="hidden" name="id" value="<%=bo.getId()%>"/>
+                <button type="submit" class="btn btn-success">Yes</button>
+            </form>
+            <a href="Home">
+                <button type="submit" class="btn btn-danger">No</button>
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
