@@ -5,6 +5,7 @@
   Time: 1:33 AM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -15,9 +16,9 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-    <%@page import="models.Book" %>
-    <%@ page import="java.util.ArrayList" %>
-    <% ArrayList<Book> list = (ArrayList<Book>) request.getAttribute("list"); %>
+<%--    <%@page import="models.Book" %>--%>
+<%--    <%@ page import="java.util.ArrayList" %>--%>
+<%--    <% ArrayList<Book> list = (ArrayList<Book>) request.getAttribute("list"); %>--%>
     <div class="container">
         <h1 class="homeMain">List Book</h1>
 
@@ -32,20 +33,35 @@
             </tr>
             </thead>
             <tbody>
-            <% for(int i=0;i<list.size();i++) { %>
-            <tr>
-                <th scope="row"><%=i+1%></th>
-                <td><%=list.get(i).getCode() %></td>
-                <td>
-                    <a href="#"><%= list.get(i).getName()%> - <%= list.get(i).getAuthor()%></a>
-                </td>
-                <td><%=list.get(i).getPrice()%> USD</td>
-                <td class="action">
-                    <a href="editBook?id=<%=list.get(i).getId()%>" class="actionAdd">Edit</a>
-                    <a href="deleteBook?id=<%=list.get(i).getId()%>" class="actionAdd">Delete</a>
-                </td>
-            </tr>
-            <% } %>
+<%--            <% for(int i=0;i<list.size();i++) { %>--%>
+<%--            <tr>--%>
+<%--                <th scope="row"><%=i+1%></th>--%>
+<%--                <td><%=list.get(i).getCode() %></td>--%>
+<%--                <td>--%>
+<%--                    <a href="#"><%= list.get(i).getName()%> - <%= list.get(i).getAuthor()%></a>--%>
+<%--                </td>--%>
+<%--                <td><%=list.get(i).getPrice()%> USD</td>--%>
+<%--                <td class="action">--%>
+<%--                    <a href="editBook?id=<%=list.get(i).getId()%>" class="actionAdd">Edit</a>--%>
+<%--                    <a href="deleteBook?id=<%=list.get(i).getId()%>" class="actionAdd">Delete</a>--%>
+<%--                </td>--%>
+<%--            </tr>--%>
+<%--            <% } %>--%>
+            <c:forEach var="item" items="${list}">
+                <tr>
+                    <th scope="row">${item.id}</th>
+                    <td>${item.code}</td>
+                    <td>
+                        <a href="#">${item.name} - ${item.author}</a>
+                    </td>
+                    <td>${item.price} USD</td>
+                    <td class="action">
+                        <a href="editBook?id=${item.id}" class="actionAdd">Edit</a>
+                        <a href="deleteBook?id=${item.id}>" class="actionAdd">Delete</a>
+                    </td>
+                </tr>
+            </c:forEach>
+
             </tbody>
         </table>
 

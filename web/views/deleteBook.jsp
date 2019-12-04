@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-<%@page import="models.Book" %>
-<% Book bo = (Book) request.getAttribute("bo"); %>
     <div class="container">
         <h1 class="homeMain">Are you sure you want to delete this book?</h1>
 
@@ -24,19 +22,19 @@
             <tbody>
                 <tr>
                     <th scope="row">Code: </th>
-                    <td><%=bo.getCode()%></td>
+                    <td>${bo.code}</td>
                 </tr>
                 <tr>
                     <th scope="row">Name:</th>
-                    <td><%=bo.getName()%></td>
+                    <td>${bo.name}</td>
                 </tr>
                 <tr>
                     <th scope="row">Author:</th>
-                    <td><%=bo.getAuthor()%></td>
+                    <td>${bo.author}</td>
                 </tr>
                 <tr>
                     <th scope="row">Price:</th>
-                    <td><%=bo.getPrice()%> USD</td>
+                    <td>${bo.price} USD</td>
                 </tr>
             </tbody>
         </table>
@@ -44,7 +42,7 @@
 
         <div class="actionDelete">
             <form action="deleteBook" method="post">
-                <input type="hidden" name="id" value="<%=bo.getId()%>"/>
+                <input type="hidden" name="id" value="${bo.id}"/>
                 <button type="submit" class="btn btn-success">Yes</button>
             </form>
             <a href="Home">
