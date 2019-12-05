@@ -1,5 +1,7 @@
 package controllers;
 
+import dao.BookDAO;
+import daoImpl.BookDaoImpl;
 import models.Book;
 import utils.IOFile;
 
@@ -20,13 +22,11 @@ public class HomeController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Book> list = new ArrayList<>();
-        ServletContext sc = this.getServletContext();
-        String path = sc.getRealPath("/WEB-INF/BookList.txt");
-        list = IOFile.read(path);
-
-        request.setAttribute("list", list);
-        RequestDispatcher rd=getServletContext().getRequestDispatcher("/views/mainBook.jsp");
-        rd.forward(request, response);
+        String url="/views/mainBook.jsp";
+        BookDAO bd = new BookDaoImpl();
+        ArrayList<Book> list = bd.findAll();
+        request.setAttribute("list",list);
+        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
+        rd.forward(request,response);
     }
 }

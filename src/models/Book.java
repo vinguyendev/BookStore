@@ -15,6 +15,13 @@ public class Book {
         this.price = price;
     }
 
+    public Book(String code, String name, String author, Double price) {
+        this.code = code;
+        this.name = name;
+        this.author = author;
+        this.price = price;
+    }
+
     public Book() {
         this.code = "";
         this.name = "";

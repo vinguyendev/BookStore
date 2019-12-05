@@ -17,35 +17,32 @@
 <body>
     <div class="container">
         <h1 class="homeMain">Update Book</h1>
+        <p><i>${msg}</i></p>
 
         <form action="editBook" method="post">
             <input type="hidden" name="id" value="${bo.id}" >
             <div class="form-group row">
-                <label for="code" class="col-sm-2 col-form-label">Code</label>
+                <label for="code" class="col-sm-2 col-form-label">Code <i>*</i></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="code" name="code" value="${bo.code}" placeholder="Enter a book code">
-                    <p>${msg1}</p>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Name Book</label>
+                <label for="name" class="col-sm-2 col-form-label">Name Book <i>*</i></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="name" name="name" value="${bo.name}" placeholder="Enter a book name">
-                    <p>${msg2}</p>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="author" class="col-sm-2 col-form-label">Author</label>
+                <label for="author" class="col-sm-2 col-form-label">Author <i>*</i></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="author" name="author" value="${bo.author}" placeholder="Enter a book author">
-                    <p>${msg3}</p>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="price" class="col-sm-2 col-form-label">Price</label>
+                <label for="price" class="col-sm-2 col-form-label">Price <i>*</i></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="price" name="price" value="${bo.price}" placeholder="Enter a book price">
-                    <p>${msg4}</p>
                 </div>
             </div>
 

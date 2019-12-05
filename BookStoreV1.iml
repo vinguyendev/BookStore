@@ -23,5 +23,6 @@
     <orderEntry type="library" name="javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="jstl-impl-1.21" level="project" />
     <orderEntry type="library" name="jstl-1.2" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.22-bin" level="project" />
   </component>
 </module>
