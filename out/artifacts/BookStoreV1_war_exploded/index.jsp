@@ -1,4 +1,9 @@
-<%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="models.Category" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="daoImpl.CategoryDaoImpl" %>
+<%@ page import="models.Book" %>
+<%@ page import="daoImpl.BookDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: ViNguyen
   Date: 12/2/2019
@@ -14,8 +19,140 @@
   <title>Booking Online</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+<%--    Start Header--%>
+    <header>
+      <nav class="top-menu">
+        <div class="row">
+          <div class="left-top-menu col-md-3">
+            <a href="/Home">
+              <img src="https://i.ibb.co/vwnJZNq/logo.png" alt="logo" border="0" width="100%">
+            </a>
+          </div>
+          <div class="center-top-menu col-md-7">
+            <div class="center-menu-top">
+              <h1>Trao trọn niềm tin</h1>
+            </div>
+            <div class="center-menu-bottom">
+              <form class="form-inline row form-search" action="">
+                <%
+                  ArrayList<Category> listCate = new CategoryDaoImpl().findAll();
+                %>
+                <select class="custom-select col-md-4">
+                  <option selected>Select Category</option>
+                  <%
+                    for(Category list : listCate) {
+                  %>
+                    <option value="<%=list.getId()%>"><%=list.getName()%></option>
+                  <%
+                    }
+                  %>
+                </select>
+                <input class="form-control col-md-5" type="search" placeholder="Tìm kiếm sách" aria-label="Search">
+                <button class="btn btn-outline-success col-md-2" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+          <div class="right-top-menu col-md-2">
+            <div class="right-menu-top">
+              <%
+                Cookie[] cookies = request.getCookies();
+                int checkLogin = 0;
+                for(int i =0;i<cookies.length;i++) {
+                  Cookie cookie = cookies[i];
+                  if(cookie.getName().equals("username") && cookie.getValue()!="") {
+                    String username = cookie.getValue();
+                    checkLogin = 1;
+                    break;
+                  }
+                }
+                if(checkLogin==1) {
+                  %>
+                  <form action="logout" method="post">
+                    <input type="submit" value="Logout" class="inputLogout">
+                  </form>
+                <%
+                  } else {
+                    %>
+                  <a href="login">Login</a>
+                <%
+                  }
+                %>
+            </div>
+            <div class="right-menu-bottom">
+              <%
+                int checkRole = 0;
+                for(int i =0;i<cookies.length;i++) {
+                  Cookie cookie = cookies[i];
+                  if(cookie.getName().equals("username") && cookie.getValue().equals("admin")) {
+                    String username = cookie.getValue();
+                    checkRole = 1;
+                    break;
+                  }
+                }
+                if(checkRole==1) {
+              %>
+              <a class="cart-icon" href="admin">
+                  <span class="mini-cart-icon">
+                    <img src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="Manage System" border="0">
+                  </span>
+              </a>
+              <%
+              } else {
+              %>
+                <a class="cart-icon" href="#">
+                  <span class="mini-cart-icon">
+                    <img src="https://image.flaticon.com/icons/png/512/34/34627.png" alt="" border="0">
+                  </span>
+                  <div class="number-cart">
+                    15
+                  </div>
+                </a>
+              <%
+                }
+              %>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+<%--    End header--%>
+
+    <%
+      ArrayList<Book> listBook = new BookDaoImpl().findAll();
+    %>
+
+    <div class="list-product">
+      <%
+        for(Book item : listBook ) {
+      %>
+          <div class="product">
+            <div class="image">
+              <img class="lazy" src="images/<%=item.getPicture()%>" style="width: 100%; display: inline;">
+            </div>
+            <a class="title" href="#">
+              <%=item.getName()%>
+            </a>
+            <div class="price-order">
+              <div class="price">
+                <%=item.getPrice()%> VNĐ
+              </div>
+              <div class="order">
+                <a class="order-add" href="#">
+                  <img src="http://cdn.onlinewebfonts.com/svg/img_553457.png" alt="" border="0" style="width: 70%; display: inline;">
+                </a>
+              </div>
+            </div>
+          </div>
+      <%
+        }
+      %>
+    </div>
+  </div>
+
   <h1 class="homeMain"> Book Maintainance </h1>
   <a href="Home" target="_self" class="viewBook">View books</a>
 </body>

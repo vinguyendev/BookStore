@@ -16,7 +16,7 @@ public class BookDaoImpl implements BookDAO {
         ArrayList<Book> list = new ArrayList<>();
         PreparedStatement statement = null;
         ResultSet rs = null;
-        String sql = "SELECT * FROM book";
+        String sql = "SELECT * FROM books";
 
         if(conn!=null) {
             System.out.println("Connected...");
@@ -30,6 +30,10 @@ public class BookDaoImpl implements BookDAO {
                     bo.setName(rs.getString("name"));
                     bo.setAuthor(rs.getString("author"));
                     bo.setPrice(rs.getDouble("price"));
+                    bo.setCategory_id(rs.getInt("category_id"));
+                    bo.setDescription(rs.getString("description"));
+                    bo.setPublisher(rs.getString("publisher"));
+                    bo.setPicture(rs.getString("picture"));
                     list.add(bo);
                 }
             } catch (SQLException e) {
@@ -56,7 +60,7 @@ public class BookDaoImpl implements BookDAO {
         Connection conn = pool.getConnection();
         PreparedStatement statement = null;
         ResultSet rs = null;
-        String sql="INSERT INTO book(code,name,author,price) VALUES(?,?,?,?)";
+        String sql="INSERT INTO books(code,name,author,price,category_id,description,publisher,picture) VALUES(?,?,?,?,?,?,?,?)";
         if(conn!=null) {
             System.out.println("connected...");
             try {
@@ -66,6 +70,10 @@ public class BookDaoImpl implements BookDAO {
                 statement.setString(2,bo.getName());
                 statement.setString(3,bo.getAuthor());
                 statement.setDouble(4,bo.getPrice());
+                statement.setInt(5,bo.getCategory_id());
+                statement.setString(6,bo.getDescription());
+                statement.setString(7,bo.getPublisher());
+                statement.setString(8,bo.getPicture());
                 statement.executeUpdate();
                 conn.commit();
             } catch (SQLException e) {
@@ -97,7 +105,7 @@ public class BookDaoImpl implements BookDAO {
         Connection conn = pool.getConnection();
         PreparedStatement statement = null;
         ResultSet rs = null;
-        String sql = "UPDATE book SET code=?,name=?,author=?,price=? WHERE id=?";
+        String sql = "UPDATE books SET code=?,name=?,author=?,price=?,category_id=?,description=?,publisher=?,picture=? WHERE id=?";
 
         if(conn!=null) {
             System.out.println("connected...");
@@ -108,7 +116,11 @@ public class BookDaoImpl implements BookDAO {
                 statement.setString(2,bo.getName());
                 statement.setString(3,bo.getAuthor());
                 statement.setDouble(4,bo.getPrice());
-                statement.setInt(5,bo.getId());
+                statement.setInt(5,bo.getCategory_id());
+                statement.setString(6,bo.getDescription());
+                statement.setString(7,bo.getPublisher());
+                statement.setString(8,bo.getPicture());
+                statement.setInt(9,bo.getId());
                 int i = statement.executeUpdate();
                 if (i>0) {
                     System.out.println("update success!");
@@ -141,7 +153,7 @@ public class BookDaoImpl implements BookDAO {
         Connection conn = pool.getConnection();
         PreparedStatement statement = null;
         ResultSet rs = null;
-        String sql = "DELETE FROM book WHERE id=?";
+        String sql = "DELETE FROM books WHERE id=?";
         if(conn!=null) {
             System.out.println("connected...");
             try {
@@ -182,7 +194,7 @@ public class BookDaoImpl implements BookDAO {
         Connection conn = pool.getConnection();
         PreparedStatement statement=null;
         ResultSet rs = null;
-        String sql= "SELECT * FROM book WHERE id=?";
+        String sql= "SELECT * FROM books WHERE id=?";
         if(conn!=null) {
             System.out.println("connected...");
             try {
@@ -195,8 +207,17 @@ public class BookDaoImpl implements BookDAO {
                     bo.setName(rs.getString("name"));
                     bo.setAuthor(rs.getString("author"));
                     bo.setPrice(rs.getDouble("price"));
+                    bo.setCategory_id(rs.getInt("category_id"));
+                    bo.setDescription(rs.getString("description"));
+                    bo.setPublisher(rs.getString("publisher"));
+                    bo.setPicture(rs.getString("picture"));
                 }
             } catch (SQLException e) {
+                try {
+                    conn.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
                 e.printStackTrace();
             } finally {
                 pool.freeConnection(conn);
