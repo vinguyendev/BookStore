@@ -91,10 +91,7 @@
                     <div class="sidebar-submenu">
                         <ul>
                             <li>
-                                <a href="#">List</a>
-                            </li>
-                            <li>
-                                <a href="#">Add</a>
+                                <a href="QLOrder">List</a>
                             </li>
                         </ul>
                     </div>

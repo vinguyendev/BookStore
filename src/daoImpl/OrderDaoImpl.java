@@ -30,6 +30,7 @@ public class OrderDaoImpl implements OrderDAO {
                     or.setDate(rs.getString("date"));
                     or.setTotal(rs.getDouble("total"));
                     or.setStatus(rs.getInt("status"));
+                    or.setNameCus(new UserDaoImpl().findById(rs.getInt("user_id")).getFullName());
                     list.add(or);
                 }
             } catch (SQLException e) {
@@ -156,6 +157,7 @@ public class OrderDaoImpl implements OrderDAO {
                     or.setDate(rs.getString("date"));
                     or.setTotal(rs.getDouble("total"));
                     or.setStatus(rs.getInt("status"));
+                    or.setNameCus(new UserDaoImpl().findById(rs.getInt("user_id")).getFullName());
                 }
             } catch (SQLException e) {
                 try {

@@ -16,7 +16,7 @@
     <%@ include file="../sidebar.jsp" %>
 
     <main class="page-content">
-        <div class="container-fluid">
+        <div class="container-fluid">a
             <h2>Category Page</h2>
             <hr>
             <a href="QLAddCategory" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Category</a>

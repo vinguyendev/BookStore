@@ -92,6 +92,17 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>QLOrderController</servlet-name>
+        <servlet-class>controllers.QLOrderController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QLOrderController</servlet-name>
+        <url-pattern>/QLOrder</url-pattern>
+        <url-pattern>/QLDeleteOrder</url-pattern>
+        <url-pattern>/QLDetailOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>AddToCartController</servlet-name>
         <servlet-class>controllers.AddToCartController</servlet-class>
     </servlet>

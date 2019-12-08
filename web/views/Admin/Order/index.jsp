@@ -17,26 +17,33 @@
 
     <main class="page-content">
         <div class="container-fluid">a
-            <h2>Category Page</h2>
+            <h2>Order Page</h2>
             <hr>
             <a href="QLAddCategory" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Category</a>
             <hr>
             <table class="table">
                 <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Action</th>
-                    </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Total Money</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="item" items="${list}">
                     <tr>
                         <th scope="row">${item.id}</th>
-                        <td>${item.name}</td>
+                        <th >
+                            <a href="QLDetailOrder?id=${item.id}">${item.nameCus}</a>
+                        </th>
+                        <th >${item.date}</th>
+                        <th >${item.total}</th>
+                        <td>${item.status}</td>
                         <td>
-                            <a href="QLEditCategory?id=${item.id}" class="btn btn-secondary active" role="button" aria-pressed="true">Edit</a>
-                            <a href="QLDeleteCategory?id=${item.id}" class="btn btn-danger active" role="button" aria-pressed="true">Delete</a>
+                            <a href="QLDeleteOrder?id=${item.id}" class="btn btn-danger active" role="button" aria-pressed="true">Delete</a>
                         </td>
                     </tr>
                 </c:forEach>

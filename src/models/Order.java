@@ -10,6 +10,17 @@ public class Order {
     private Double total;
     private int status;
     private ArrayList<Item> listItems;
+    private String nameCus;
+
+    public String getNameCus() {
+        return nameCus;
+    }
+
+    public void setNameCus(String nameCus) {
+        this.nameCus = nameCus;
+    }
+
+
 
     public Order() {
         this.status = 0;

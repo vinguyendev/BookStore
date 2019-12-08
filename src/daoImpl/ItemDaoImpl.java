@@ -29,6 +29,7 @@ public class ItemDaoImpl implements ItemDAO {
                     it.setAmount(rs.getInt("amount"));
                     it.setBook(new BookDaoImpl().findById(rs.getInt("book_id")));
                     it.setOrder(new OrderDaoImpl().findById(order_id));
+                    it.setNameBook(new BookDaoImpl().findById(rs.getInt("book_id")).getName());
                     list.add(it);
                 }
             } catch (SQLException e) {

@@ -7,11 +7,20 @@ public class Item {
     private int amount;
     private int book_id;
     private int order_id;
+    private String nameBook;
 
     public Item(int book_id,int order_id,int amount) {
         this.book_id = book_id;
         this.order_id = order_id;
         this.amount = amount;
+    }
+
+    public String getNameBook() {
+        return nameBook;
+    }
+
+    public void setNameBook(String nameBook) {
+        this.nameBook = nameBook;
     }
 
     public int getBook_id() {
