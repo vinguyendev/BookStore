@@ -21,6 +21,7 @@ public class LoginController extends HttpServlet {
 
         User user = ud.findUser(username,password);
         String nameUser = ud.findNameUser(username,password);
+
         int role = user.getRole();
         String nameRole = "user";
         if(role==2) {
@@ -28,6 +29,10 @@ public class LoginController extends HttpServlet {
         }
 
         HttpSession session = request.getSession();
+        String url = "";
+        if(session.getAttribute("url")!=null) {
+            url = session.getAttribute("url").toString();
+        } else url = "/index.jsp";
 
         if(username.length()==0||password.length()==0||nameUser=="") {
             msg = "* marks required fields!";
@@ -46,12 +51,12 @@ public class LoginController extends HttpServlet {
 
                 response.addCookie(ckUser);
                 response.addCookie(ckRole);
-                RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
+                RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
                 rd.forward(request,response);
             }
         }
 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
         rd.forward(request,response);
 
     }

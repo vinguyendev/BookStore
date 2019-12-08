@@ -10,4 +10,7 @@ public interface BookDAO {
     public void Update(Book bo);
     public void Delete(int id);
     public Book findById(int id);
+    public ArrayList<Book> findByName(String name);
+    public ArrayList<Book> findByCate(int category_id);
+    public ArrayList<Book> findByNameCate(String name,int category_id);
 }

@@ -279,4 +279,52 @@ public class UserDaoImpl implements UserDAO {
         return nameUser;
     }
 
+    @Override
+    public User findByUserName(String username) {
+        User us = new User();
+        ConnectionPool pool = ConnectionPool.getInstance();
+        Connection conn = pool.getConnection();
+        PreparedStatement statement=null;
+        ResultSet rs = null;
+        String sql = "SELECT * FROM users WHERE username=?";
+
+        if(conn!=null) {
+            System.out.println("connected...");
+            try {
+                statement=conn.prepareStatement(sql);
+                statement.setString(1,username);
+                rs = statement.executeQuery();
+                while (rs.next()) {
+                    us.setId(rs.getInt("id"));
+                    us.setUsername(rs.getString("username"));
+                    us.setPassword(rs.getString("password"));
+                    us.setRole(rs.getInt("role"));
+                    us.setMobile(rs.getString("mobile"));
+                    us.setFullName(rs.getString("fullName"));
+                    us.setAddress(rs.getString("address"));
+                }
+            } catch (SQLException e) {
+                try {
+                    conn.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                e.printStackTrace();
+            } finally {
+                pool.freeConnection(conn);
+                if (statement!=null) {
+                    try {
+                        statement.close();
+                        if(rs!=null) rs.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        System.out.println(us);
+
+        return us;
+    }
+
 }

@@ -7,30 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="238d7ef2-8fa2-4081-8288-3c35835546ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_fileupload_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_springframework_web_servlet_3_1_2_release.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookStoreV1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStoreV1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/controllers/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/config/checkRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/daoImpl/BookDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/daoImpl/BookDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/BookIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/utils/IOFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/utils/IOFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/daoImpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/daoImpl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/utils/SecurityUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/classes/utils/UrlPatternUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStoreV1_war_exploded/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/controllers/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/config/checkRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/daoImpl/BookDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/daoImpl/BookDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/models/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/models/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/models/BookIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/utils/IOFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/utils/IOFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/daoImpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/daoImpl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/models/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/models/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStoreV1/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/utils/SecurityUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStoreV1/utils/UrlPatternUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/daoImpl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/daoImpl/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/BookIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/daoImpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/daoImpl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/styles.css" afterDir="false" />
@@ -212,7 +219,7 @@
       <workItem from="1575547512007" duration="429000" />
       <workItem from="1575549423562" duration="13670000" />
       <workItem from="1575602457149" duration="603000" />
-      <workItem from="1575604515362" duration="90657000" />
+      <workItem from="1575604515362" duration="119482000" />
     </task>
     <servers />
   </component>
@@ -238,11 +245,11 @@
     </state>
     <state x="274" y="47" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1575549809821" />
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1575221938142" />
-    <state x="1210" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1575707929637">
+    <state x="1210" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1575805186956">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="861" y="156" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1575553715712" />
-    <state x="1210" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1575707929637" />
+    <state x="1210" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1575805186956" />
     <state x="513" y="79" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1575461999658">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -256,66 +263,66 @@
     </state>
     <state x="389" y="110" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1575547919626" />
     <state x="547" y="157" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1575753808293" />
-    <state width="1433" height="196" key="GridCell.Tab.0.bottom" timestamp="1575752207630">
+    <state width="1433" height="352" key="GridCell.Tab.0.bottom" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1575549187797" />
-    <state width="1433" height="196" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207630" />
-    <state width="1433" height="196" key="GridCell.Tab.0.center" timestamp="1575752207630">
+    <state width="1433" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.0.center" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1575549187796" />
-    <state width="1433" height="196" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207630" />
-    <state width="1433" height="196" key="GridCell.Tab.0.left" timestamp="1575752207630">
+    <state width="1433" height="352" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.0.left" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1575549187796" />
-    <state width="1433" height="196" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207630" />
-    <state width="1433" height="196" key="GridCell.Tab.0.right" timestamp="1575752207630">
+    <state width="1433" height="352" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.0.right" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1575549187797" />
-    <state width="1433" height="196" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207630" />
-    <state width="1433" height="196" key="GridCell.Tab.1.bottom" timestamp="1575752207632">
+    <state width="1433" height="352" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.1.bottom" timestamp="1575808583941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1575549187799" />
-    <state width="1433" height="196" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207632" />
-    <state width="1433" height="196" key="GridCell.Tab.1.center" timestamp="1575752207632">
+    <state width="1433" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583941" />
+    <state width="1433" height="352" key="GridCell.Tab.1.center" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1575549187798" />
-    <state width="1433" height="196" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207632" />
-    <state width="1433" height="196" key="GridCell.Tab.1.left" timestamp="1575752207630">
+    <state width="1433" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.1.left" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1575549187798" />
-    <state width="1433" height="196" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207630" />
-    <state width="1433" height="196" key="GridCell.Tab.1.right" timestamp="1575752207632">
+    <state width="1433" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.1.right" timestamp="1575808583940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1575549187799" />
-    <state width="1433" height="196" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207632" />
-    <state width="1433" height="196" key="GridCell.Tab.2.bottom" timestamp="1575752207634">
+    <state width="1433" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583940" />
+    <state width="1433" height="352" key="GridCell.Tab.2.bottom" timestamp="1575808583941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1575549187800" />
-    <state width="1433" height="196" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207634" />
-    <state width="1433" height="196" key="GridCell.Tab.2.center" timestamp="1575752207632">
+    <state width="1433" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583941" />
+    <state width="1433" height="352" key="GridCell.Tab.2.center" timestamp="1575808583941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1575549187799" />
-    <state width="1433" height="196" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207632" />
-    <state width="1433" height="196" key="GridCell.Tab.2.left" timestamp="1575752207632">
+    <state width="1433" height="352" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583941" />
+    <state width="1433" height="352" key="GridCell.Tab.2.left" timestamp="1575808583941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1575549187799" />
-    <state width="1433" height="196" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207632" />
-    <state width="1433" height="196" key="GridCell.Tab.2.right" timestamp="1575752207633">
+    <state width="1433" height="352" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583941" />
+    <state width="1433" height="352" key="GridCell.Tab.2.right" timestamp="1575808583941">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1003" height="173" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1575549187800" />
-    <state width="1433" height="196" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575752207633" />
+    <state width="1433" height="352" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1575808583941" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1575459456017">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -337,10 +344,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1575542092954" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1575310866061">
+    <state x="616" y="243" key="run.anything.popup" timestamp="1575801241444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1575310866061" />
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1575801241444" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1575727581258">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

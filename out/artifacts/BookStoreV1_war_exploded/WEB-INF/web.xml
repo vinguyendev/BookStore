@@ -91,6 +91,53 @@
         <url-pattern>/QLDeleteUser</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AddToCartController</servlet-name>
+        <servlet-class>controllers.AddToCartController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddToCartController</servlet-name>
+        <url-pattern>/addToCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>controllers.OrderController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartController</servlet-name>
+        <servlet-class>controllers.CartController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartController</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConfirmController</servlet-name>
+        <servlet-class>controllers.ConfirmController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfirmController</servlet-name>
+        <url-pattern>/confirm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchController</servlet-name>
+        <servlet-class>controllers.SearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchController</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+
+
 <!--    <servlet>-->
 <!--        <servlet-name>DisplayImage</servlet-name>-->
 <!--        <servlet-class>servlets.DisplayImage</servlet-class>-->
